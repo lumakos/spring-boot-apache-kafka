@@ -1,6 +1,6 @@
 # Springboot AND apache-kafka
 
-This guide provides instructions for installing and running Apache Kafka on a Linux system with SpringBoot.
+This guide explains how to run and send messages with Spring Boot using Apache Kafka on a Linux system.
 About ApacheKafka: https://github.com/lumakos/apache-kafka-101 
 
 ### Start Zookeeper and Kafka
