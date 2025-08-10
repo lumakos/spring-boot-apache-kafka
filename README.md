@@ -25,9 +25,9 @@ First, you'll need a Spring Boot project. The easiest way to create one is by us
 
 2. Add the following dependencies:
 
-- Spring Web: For building REST APIs (optional, but useful for a simple producer endpoint).
+- <b>Spring Web</b>: For building REST APIs (optional, but useful for a simple producer endpoint)
 
-- Spring for Apache Kafka: This is the core dependency for Kafka integration.
+- <b>Spring for Apache Kafka</b>: This is the core dependency for Kafka integration.
 
 3.  Configuration
 Spring Boot automatically detects the Kafka configuration in your application.properties file. You need to specify the bootstrap servers to connect to your Kafka cluster.
