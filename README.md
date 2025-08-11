@@ -4,19 +4,17 @@ This guide explains how to run and send messages with Spring Boot using Apache K
 
 About ApacheKafka: https://github.com/lumakos/apache-kafka-101 
 
+### Stack
+<b><u>Gradle (Groovy DSL) + Spring Boot 3.5.4 + Java 17 + Apache Kafka 3.5.0</u></b>
+
 ### Start Zookeeper and Kafka
 
 Apache Kafka requires Zookeeper to run. You will need to open two separate terminal windows for this process.
 
-* **Terminal 1 (Start Zookeeper):**
-    ```sh
-    zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
-    ```
-* **Terminal 2 (Start Kafka):**
-    ```sh
-    kafka-server-start.sh /opt/kafka/config/server.properties
-    ```
 
+```
+docker-compose up -d
+```
 ---
 
 ### Project Setup
@@ -46,7 +44,19 @@ Spring Boot automatically detects the Kafka configuration in your application.pr
 ```
 
 ### Now, open your browser and navigate to:
-http://localhost:8080/send?message=Hello%20Kafka
+```
+curl -X POST http://localhost:8080/api/transactions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "transactionId":"tx-123",
+    "accountId":"acct-1",
+    "amount": 15000.00,
+    "currency": "EUR",
+    "timestamp": "2025-08-10T12:30:00Z",
+    "merchant":"BigStore",
+    "location":"Athens"
+  }'
+```
 
 
 ### Check terminal for producer messages and consumer messages
