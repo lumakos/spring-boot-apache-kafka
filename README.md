@@ -5,7 +5,14 @@ This guide explains how to run and send messages with Spring Boot using Apache K
 About ApacheKafka: https://github.com/lumakos/apache-kafka-101 
 
 ### Stack
-<b><u>Gradle (Groovy DSL) + Spring Boot 3.5.4 + Java 17 + Apache Kafka 3.5.0</u></b>
+<b><u>
+Gradle (Groovy DSL) 
+
+Spring Boot 3.5.4 
+
+Java 17
+
+Apache Kafka 3.5.0</u></b>
 
 ### Start Zookeeper and Kafka
 
